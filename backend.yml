@@ -15,7 +15,7 @@ spec:
       labels:
         app: backend
     spec:
-      container:
+      containers:
       - name: "backend"
         image: "mysql:5.7"      
         env:
