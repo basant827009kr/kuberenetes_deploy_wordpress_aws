@@ -11,29 +11,29 @@ spec:
       name: wpressdb
       labels:
         app: backend
-      spec:
-        container:
-        - name: "backend"
-          image: "mysql:5.7"      
-          env:
-          - name: MYSQL_ROOT_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: secret
-                key: rootpass
-          - name: MYSQL_USER
-            valueFrom:
-              secretKeyRef:
-                name: secret
-                key: user
-          - name: MYSQL_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: secret
-                key: pass
-          - name: MYSQL_DATABASE
-            valueFrom:
-              secretKeyRef:
-                name: secret
-                key: dbname 
+    spec:
+      container:
+      - name: "backend"
+        image: "mysql:5.7"      
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: secret
+              key: rootpass
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: secret
+              key: user
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: secret
+              key: pass
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: secret
+              key: dbname 
               
