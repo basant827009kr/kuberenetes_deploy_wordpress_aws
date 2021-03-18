@@ -22,21 +22,21 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: secret
+              name: mydbsecret
               key: rootpass
         - name: MYSQL_USER
           valueFrom:
             secretKeyRef:
-              name: secret
+              name: mydbsecret
               key: user
         - name: MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: secret
+              name: mydbsecret
               key: pass
         - name: MYSQL_DATABASE
           valueFrom:
             secretKeyRef:
-              name: secret
+              name: mydbsecret
               key: dbname 
               
